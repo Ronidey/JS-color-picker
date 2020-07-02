@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Picker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="app">
+    <div class="hero" id="hero">
+      <svg viewBox="0 0 24 24" class="smile">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path
+          d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
+      </svg>
+
+      <div class="hero_intro">
+        <h1 class="hero_title" id="title">Color Picker</h1>
+        <h4 class="hero_subtitle" id="subtitle">We make color picking easy and fun for you :)</h4>
+      </div>
+
+      <div class="control">
+        <!-- Color -->
+        <div class="control-group">
+          <label for="inp-range" class="label">Color:</label>
+          <input type="range" data-type="h" class="color-range" min="0" max="360" step="1" value="210">
+        </div>
+
+        <!-- Saturation -->
+        <div class="control-group">
+          <label for="inp-range" class="label">Saturation:</label>
+          <input type="range" data-type="s" value="100">
+        </div>
+
+        <!-- Brightness -->
+        <div class="control-group">
+          <label for="inp-range" class="label">Brightness:</label>
+          <input type="range" data-type="l" value="50">
+        </div>
+
+        <div class="value-group">
+          <label for="inp-hex" class="label">Hex:</label>
+          <span class="circle"></span>
+          <input type="text" id="inp-hex" readonly>
+        </div>
+        <div class="value-group">
+          <label for="inp-rgb" class="label">RGB:</label>
+          <span class="circle"></span>
+          <input type="text" id="inp-rgb" readonly>
+        </div>
+        <div class="value-group">
+          <label for="inp-hsl" class="label">HSL:</label>
+          <span class="circle"></span>
+          <input type="text" id="inp-hsl" readonly>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="bundle.js"></script>
+</body>
+
+</html>

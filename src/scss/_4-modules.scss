@@ -1,0 +1,75 @@
+// Watermark smile
+.smile {
+  position: absolute;
+  top: 0rem;
+  width: 300px;
+  fill: currentColor;
+  opacity: 0.1;
+  right: 2rem;
+  z-index: -1;
+
+  @include m-query(800px) {
+    right: auto;
+    top: 25%;
+    width: 400px;
+  }
+}
+
+
+.control {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
+
+  @include m-query(800px) {
+    position: absolute;
+    top: 10%;
+    right: 2rem;
+    width: 45%;
+  }
+
+  &-group {
+    margin-bottom: 2rem;
+  }
+
+  .color-range::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #{$colors});
+  }
+
+  .color-range::-moz-range-track {
+    background: linear-gradient(to right, #{$colors});
+  }
+
+  .color-range::-ms-track {
+    background: linear-gradient(to right, #{$colors});
+  }
+}
+
+// Value group
+.value-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+
+  input {
+    flex: 1;
+  }
+}
+
+.label {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #555;
+}
+.circle {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  margin-right: 1rem;
+}
